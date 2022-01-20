@@ -17,7 +17,7 @@ export default [
   {
     name: "stageTexture",
     type: "texture",
-    path: "textures/youniverseTexture/stageTexture.png",
+    path: "textures/youniverseTexture/stageTexture002.png",
   },
   {
     name: "glassesModel",
