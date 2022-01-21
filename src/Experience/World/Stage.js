@@ -30,7 +30,6 @@ export default class youniverseBase {
       if (child instanceof THREE.Mesh) {
         child.castShadow = true;
         child.material = this.material;
-        console.log(child.material);
       }
     });
 
