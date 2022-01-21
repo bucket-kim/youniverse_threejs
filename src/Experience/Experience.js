@@ -33,6 +33,9 @@ export default class Experience {
     this.renderer = new Renderer();
     this.world = new World();
 
+    // function
+    this.setConfig();
+
     // sizes on resize event
     this.sizes.on("resize", () => {
       this.resize();
@@ -42,8 +45,28 @@ export default class Experience {
       this.update();
     });
   }
+  setConfig() {
+    this.config = {};
+
+    // pixel ratio
+    this.config.pixelRatio = Math.min(Math.max(window.devicePixelRatio, 1), 2);
+
+    // widht and height
+    const bounding = this.canvas.getBoundingClientRect();
+    this.config.width = bounding.width;
+    this.config.height = bounding.height || window.innerHeight;
+    this.config.smallestSide = Math.min(this.config.width, this.config.height);
+    this.config.largestSide = Math.max(this.config.width, this.config.height);
+  }
 
   resize() {
+    // config
+    const bounding = this.canvas.getBoundingClientRect();
+    this.config.width = bounding.width;
+    this.config.height = bounding.height || window.innerHeight;
+    this.config.smallestSide = Math.min(this.config.width, this.config.height);
+    this.config.largestSide = Math.max(this.config.width, this.config.height);
+
     this.camera.resize();
     this.renderer.resize();
   }

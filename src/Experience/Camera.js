@@ -27,7 +27,18 @@ export default class Camera {
 
   setOrbitControl() {
     this.controls = new OrbitControls(this.instance, this.canvas);
+    this.controls.enableKeys = false;
+    this.controls.zoomSpeed = 0.25;
     this.controls.enableDamping = true;
+
+    // setting limit
+    this.controls.minPolarAngle = 0;
+    this.controls.maxPolarAngle = Math.PI * 0.5;
+    this.controls.minAzimuthAngle = 0;
+    this.controls.maxAzimuthAngle = Math.PI * 0.5;
+    this.controls.panSpeed = 0.5;
+    this.controls.rotateSpeed = 0.5;
+    this.controls.update();
   }
 
   resize() {
@@ -37,5 +48,6 @@ export default class Camera {
 
   update() {
     this.controls.update();
+    this.instance.updateMatrixWorld();
   }
 }
