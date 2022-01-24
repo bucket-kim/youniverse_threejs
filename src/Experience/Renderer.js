@@ -19,6 +19,7 @@ export default class Renderer {
       alpha: false,
     });
     this.instance.physicallyCorrectLights = true;
+    this.instance.autoClear = false;
     // this.instance.outputEncoding = THREE.sRGBEncoding;
     // this.instance.toneMapping = THREE.ACESFilmicToneMapping;
     // this.instance.toneMappingExposure = 1;

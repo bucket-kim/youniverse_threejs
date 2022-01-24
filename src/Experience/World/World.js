@@ -4,6 +4,7 @@ import Environment from "./Environment.js";
 import youniverseBase from "./youniverseBase.js";
 import mainStage from "./Stage.js";
 import glasses from "./glasses.js";
+import Stars from "./Stars.js";
 
 export default class World {
   constructor() {
@@ -22,10 +23,10 @@ export default class World {
     this.resources.on("ready", () => {
       // setup
       this.youniverseBase = new youniverseBase();
-      // this.fox = new Fox();
-      this.environment = new Environment();
+      // this.environment = new Environment();
       this.mainStage = new mainStage();
       this.glasses = new glasses();
+      this.stars = new Stars();
     });
   }
 

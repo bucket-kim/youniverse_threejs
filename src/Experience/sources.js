@@ -24,4 +24,10 @@ export default [
     type: "gltfModel",
     path: "models/youniverse/glasses.gltf",
   },
+
+  {
+    name: "galaxyTexture",
+    type: "texture",
+    path: "textures/background/galaxy.png",
+  },
 ];
