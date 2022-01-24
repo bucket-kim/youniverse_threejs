@@ -2,27 +2,27 @@ export default [
   {
     name: "youniverseModel",
     type: "gltfModel",
-    path: "models/youniverse/youniverseStage.gltf",
+    path: "models/youniverse/youniverseStage.glb",
   },
   {
     name: "youniverseTexture",
     type: "texture",
-    path: "textures/youniverseTexture/assets.png",
+    path: "textures/youniverseTexture/assets.jpg",
   },
   {
     name: "stageModel",
     type: "gltfModel",
-    path: "models/youniverse/mainStage.gltf",
+    path: "models/youniverse/mainStage.glb",
   },
   {
     name: "stageTexture",
     type: "texture",
-    path: "textures/youniverseTexture/stageTexture002.png",
+    path: "textures/youniverseTexture/stageTexture.jpg",
   },
   {
     name: "glassesModel",
     type: "gltfModel",
-    path: "models/youniverse/glasses.gltf",
+    path: "models/youniverse/glasses.glb",
   },
 
   {

@@ -19,9 +19,18 @@ export default class youniverseBase {
     this.model.scale.set(0.75, 0.75, 0.75);
     this.scene.add(this.model);
 
+    this.material = new THREE.MeshStandardMaterial({
+      color: 0x272727,
+      transparent: true,
+      opacity: 0.318,
+      metalness: 0.3,
+      roughness: 0.07,
+    });
+
     this.model.traverse((child) => {
       if (child instanceof THREE.Mesh) {
         child.castShadow = true;
+        child.material = this.material;
       }
     });
   }
