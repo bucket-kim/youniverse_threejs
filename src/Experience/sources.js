@@ -1,5 +1,18 @@
 export default [
   {
+    name: "environmentMapTexture",
+    type: "cubeTexture",
+    path: [
+      "textures/background/px.png",
+      "textures/background/nx.png",
+      "textures/background/py.png",
+      "textures/background/ny.png",
+      "textures/background/pz.png",
+      "textures/background/nz.png",
+    ],
+  },
+
+  {
     name: "youniverseModel",
     type: "gltfModel",
     path: "models/youniverse/youniverseStage.glb",

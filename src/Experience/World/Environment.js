@@ -14,7 +14,7 @@ export default class Environment {
     }
 
     // this.setSunLight();
-    // this.setEnvMap();
+    this.setEnvMap();
   }
 
   setSunLight() {
@@ -34,6 +34,7 @@ export default class Environment {
     this.environmentMap.texture.encoding = THREE.sRGBEncoding;
 
     this.scene.environment = this.environmentMap.texture;
+    this.scene.background = this.environmentMap.texture;
 
     this.environmentMap.updateMaterial = () => {
       this.scene.traverse((child) => {
