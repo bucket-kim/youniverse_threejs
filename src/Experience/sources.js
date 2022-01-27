@@ -43,4 +43,19 @@ export default [
     type: "texture",
     path: "textures/background/galaxy.png",
   },
+  {
+    name: "ledModel",
+    type: "gltfModel",
+    path: "models/youniverse/led.glb",
+  },
+  {
+    name: "ethereumModel",
+    type: "gltfModel",
+    path: "models/youniverse/ethereum.glb",
+  },
+  {
+    name: "lettersModel",
+    type: "gltfModel",
+    path: "models/youniverse/letters.glb",
+  },
 ];

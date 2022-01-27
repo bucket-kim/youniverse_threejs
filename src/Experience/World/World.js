@@ -5,6 +5,7 @@ import youniverseBase from "./youniverseBase.js";
 import mainStage from "./Stage.js";
 import glasses from "./glasses.js";
 import Stars from "./Stars.js";
+import glowLed from "./glowLed.js";
 
 export default class World {
   constructor() {
@@ -27,12 +28,16 @@ export default class World {
       this.mainStage = new mainStage();
       this.glasses = new glasses();
       this.stars = new Stars();
+      this.glowLed = new glowLed();
     });
   }
 
   update() {
-    if (this.fox) {
-      this.fox.update();
+    // if (this.fox) {
+    //   this.fox.update();
+    // }
+    if (this.glowLed) {
+      this.glowLed.update();
     }
   }
 }

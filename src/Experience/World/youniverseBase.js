@@ -7,8 +7,8 @@ export default class youniverseBase {
     this.scene = this.experience.scene;
     this.resources = this.experience.resources;
     this.time = this.experience.time;
-
     this.resource = this.resources.items.youniverseModel;
+    this.camera = this.experience.camera;
 
     this.setModel();
   }
@@ -17,7 +17,6 @@ export default class youniverseBase {
     this.model = this.resource.scene;
     this.model.rotation.y = -Math.PI * 0.5;
     this.model.scale.set(0.75, 0.75, 0.75);
-    this.scene.add(this.model);
 
     this.texture = this.resources.items.youniverseTexture;
     this.texture.flipY = false;
@@ -32,5 +31,6 @@ export default class youniverseBase {
         child.material = this.material;
       }
     });
+    this.scene.add(this.model);
   }
 }
