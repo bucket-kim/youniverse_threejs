@@ -23,10 +23,10 @@ export default class World {
     this.resources.on("ready", () => {
       // setup
       this.youniverseBase = new youniverseBase();
-      // this.environment = new Environment();
+      this.environment = new Environment();
       this.mainStage = new mainStage();
-      // this.glasses = new glasses();
-      // this.stars = new Stars();
+      this.glasses = new glasses();
+      this.stars = new Stars();
     });
   }
 
